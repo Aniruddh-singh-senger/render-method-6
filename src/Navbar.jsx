@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import React, { useState } from 'react'
 import Home from './Home';
 import Services from './Services'
@@ -10,7 +10,7 @@ const Navbar = () => {
     const [show, setShow] = useState();
 
     return (
-        <><Router>
+        <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <Link className="navbar-brand" as={Link} to={'/Home'}>Web development</Link>
@@ -53,7 +53,6 @@ const Navbar = () => {
                     <Home />
                 </Route>
             </Switch>
-        </Router>
         </>
     )
 }
